@@ -1,0 +1,768 @@
+/*IN ORDER OF
+    body
+    head - h3
+    navbar
+    sidebar
+    backgrounds
+    Others-mainly divs
+    icons
+    classySwag
+    modal-author
+    load_screen
+    footer
+*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin:0;
+    outline: none;
+}
+
+body{
+    color: #ddd;
+    font-size: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    /*300 is good too*/
+    font-weight: 300;
+    background-color:#336699;
+    overflow-x: hidden !important;
+}
+
+
+#navbar{}
+    ul#navbar.before{
+        position: absolute;
+        top : 85vh;
+    }
+
+    ul#navbar {
+        letter-spacing: 1px;
+        font-size: 1.4em;
+        /*background-color: rgba(0,0,0,0.4);*/
+        left:0;
+        width: 100vw;
+        z-index:1;
+        background-color:tranparent;
+        text-transform: uppercase;
+    }
+    ul#navbar > li{
+        display: inline;
+        text-align: center;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+
+        padding: 30px 40px;
+        display:inline-block;
+        text-decoration: none;
+        color: #ddd;
+        transition: all .5s ease-in-out;
+    }
+    ul#navbar > li:hover{
+        color: #fff;
+        text-decoration: underline;
+    }
+    ul#navbar > li.right{
+        float: right;
+        transition: all .5s ease-in-out;
+        font-size: 0.8em;
+    }
+
+    ul#navbar.after{
+        position: fixed;
+        top: 0;
+
+    }
+    ul#navbar.aftereffects{
+        background-color: rgba(0,0,0,0.8);
+        position: fixed;
+        font-size: 1em;
+        height: 80px;
+        transition: all .5s ease-in-out;
+    }
+
+
+#sidebar{}
+    ul#flash{
+        position:fixed;
+        background-color: rgba(0,0,0,0.7);
+        left: 0;
+        top:0;
+        margin: 0;
+        height: 100vh;
+        width:0vh;
+        z-index: 2;
+        transition: 0.4s;
+        list-style: none;
+        overflow-y: hidden;         /*he secret Ingeredient*/
+    }
+
+    ul#flash > li{
+        padding: 1vh;
+        font-size: 1em;
+        text-align: center;
+        position: relative;             /*last 3 lines make it center properly*/
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    ul#flash > li >a{
+        font-size: 1em;
+        text-align: center;
+        text-decoration: none;
+        color : #ddd;
+        cursor: pointer;
+    }
+
+    ul#flash > li >a:hover{
+        color: #0076d7;
+    }
+    ul#flash > li.bottom > a{
+        padding: 10px;
+    }
+
+    ul#flash > li.bottom > a:hover{
+        color:#0076d7;
+        cursor: pointer;
+    }
+
+
+
+
+
+#backgrounds{}
+    div.home{
+        /*background-image: url("https://images.unsplash.com/photo-1473252661224-1b28d29788e8?ixlib=rb-0.3.5&q=80&fm=jpg&crop=");*/
+        /*position: absolute;*/
+        top:0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    div.about-me{
+        /*background-image: url("https://images.unsplash.com/photo-1435685813800-51ba4ceb9c4a?dpr=2&auto=format&fit=crop&w=1500&h=848&q=80&cs=tinysrgb&crop=");*/
+        position: relative;
+        background-color: black;
+        /*top:100vh;*/
+        margin: 0;
+        height: 150vh;
+        width: 100vw;
+        text-align: center;
+        /*the while ones which come from left and right are causing the overflow... so*/
+        overflow-x: hidden !important;
+
+    }
+
+    div.blog_styles{
+        background-color: #ddd;
+        width: 100vw;
+        color: black;
+        padding: 20px 0px;
+    }
+
+    div.homepage_style{
+        background-color: #ddd;
+        color: black;
+        padding: 20px 0px;
+    }
+
+
+#Others{}
+    div.box1{
+        /*padding: 80px;*/
+        position: absolute;                                     /*relave works?*/
+        width: 40vw;
+        top:30vh;
+        left: 30vw;
+        height: 40vh;
+        color: #ddd;
+        line-height: 180%;
+        /*letter-spacing: 1px;*/
+        font-size: 1.2em;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 1s ease-in 0s;
+        transition: all 1s ease-out 0s;
+        z-index: 1;
+    }
+
+#div-about-me{}
+    div.about-me > .midbox{
+        position: absolute;
+        width: 50vw;
+        left: 25vw;
+        height: 10vh;
+        opacity: 0;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        text-align: center;
+        transition: opacity 1s ease-in 0s;
+        transition: all 1s ease-out 0s;
+    }
+    div.about-me > .leftbox, div.about-me > .rightbox{
+        position: absolute;
+        font-size: 1.25em;
+        opacity: 0;
+        width: 40vw;
+        height: 10vh;
+        transition: opacity 1s ease-in 0s;
+        transition: all 1s ease-out 0s;
+    }
+
+    div.about-me > .leftbox{
+        left: -20vw;
+        text-align: right;
+    }
+    div.about-me > .rightbox{
+        right: -20vw;
+        text-align: left;
+    }
+
+    div.about-me > div.box210{
+        top : 30vh;
+    }
+    div.about-me > div.box220{
+        top : 70vh;
+    }
+    div.about-me > div.box230{
+        top : 110vh;
+    }
+
+
+    div.about-me > div.box211{
+        top : 40vh;
+
+    }
+    div.about-me > div.box221{
+        top : 80vh;
+    }
+    div.about-me > div.box231{
+        top: 120vh;
+    }
+
+    div.about-me > div.box212{
+        top : 40vh;
+
+    }
+    div.about-me > div.box222{
+        top : 80vh;
+    }
+    div.about-me > div.box232{
+        top: 120vh;
+    }
+
+#div-blog_styles{}
+
+    div.blog_styles{
+        /*secret ingredient*/
+        text-align: center;
+
+    }
+    iframe {
+        display: inline-block;
+        margin: 0 auto;
+        border: none;
+        width: 40vw;
+        height: 22.5vw;
+        /*padding: 0.5em 1em;*/
+    }
+
+    iframe.big{
+        width: 80vw;
+        height: 45vw;
+    }
+
+
+
+
+
+#homepage_style-homepages{}
+    div.homepage_style{
+        text-align: center;
+        font-weight: 400;
+    }
+    div.homepage_style > div.home-box{
+        position: relative;
+        display: inline-block;
+        height: 135px;
+        width: 260px;
+        margin: 40px 20px;
+        /*background-color: ;*/
+        color: #ccc;
+        border : none !important; 
+
+    }
+    div.homepage_style > div.home-box > div.home{
+        position: relative;
+        height: 150px;
+        width: 240px;
+        border: 1px solid black;
+        transition: all .3s ease-in-out;
+        background-color: transparent;
+    }
+    div.homepage_style > div.home-box >p{
+        padding: 10px;
+    }
+
+    div.homepage_style > div.home-box:hover > div.home {
+        width: 250px;
+    }
+/*
+    div.homepage_style > div.home-box:hover > div.home > div{
+        background-color: white;
+    }*/
+
+    div.homepage_style div.home > div.openStyle{
+        /*no other display worked*/
+        position: absolute;
+        display: flex;
+        width: 0;
+        bottom: 0;
+        height: 20%;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+        align-items: center; /* Vertical center alignment */
+        justify-content: center; /* Horizontal center alignment */
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.9em;
+    }
+
+    div.homepage_style div.home:hover > div.openStyle{
+        width: 100%;
+        opacity: 1;
+    }
+
+    div.homepage_style div.home:hover{
+        background-color: #f8f8f8;
+    }
+
+    div.home-box div.home{
+        background-image: url("wow.jpg");
+        top:0;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        background-position: 50% 50%;
+
+
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+
+#icons{}
+
+    div.box1  i.fa-angle-down{
+        display: inline-block;
+        padding-top: 0px;
+        font-size: 3em;
+        color: #ddd;
+        text-decoration: none;
+        /*transform: rotate(90deg);*/
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    div.box1  i.fa-angle-down:hover{
+        color:#0076d7;
+    }
+
+    @keyframes bounce {
+       0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+       40% {transform: translateY(-20px);}
+       60% {transform: translateY(-10px);}
+    }
+
+    div.burger{
+        position: fixed;
+        top : 150px;
+        left: 40px;
+        z-index: 5;
+    }
+
+    div.burger:hover{
+        color:#0076d7;
+    }
+    div.burger:hover > div.dash{
+        margin-bottom: 8px;
+    }
+
+    div.burger > div.dash{
+        position: relative;
+        width: 40px;
+        height: 1px;
+        border-radius: 1px;
+        background-color: #ddd;
+        margin: 6px;
+        /*opacity: 0;*/
+        margin-top: -150px;
+
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+    }
+    div.burger > div.dash.menu{
+        background-color: transparent;
+        font-size: 0.8em;
+    }
+
+
+    div.burger > div.dash.clock, div.burger > div.dash.antiClock{
+        -webkit-transform-origin: 62% 0;
+        -moz-transform-origin: 62% 0;
+        -ms-transform-origin: 62% 0;
+        -o-transform-origin: 62% 0;
+        transform-origin: 62% 0;
+    }
+
+    div.playAnimation{
+        position: absolute;
+        right: -60px;
+        top : 150px;
+        font-size: 100%;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: all .5s ease-out;
+        z-index: 1;
+    }
+
+    div.playAnimation  i.fa-play-circle{
+        font-size: 200%;
+        vertical-align: middle;
+        color: white;
+        background-color: transparent;
+        -webkit-transition: all 0.1s ease-out;
+        -moz-transition: all 0.1s ease-out;
+        -o-transition: all 0.1s ease-out;
+        transition: all 0.1s ease-out;
+    }
+    div.playAnimation  i.fa-play-circle:hover{
+        color:#0076d7;
+        font-size: 180%;
+    }
+
+
+
+
+#classySwag{}
+    div.classy{
+        top:0;
+        position: absolute;
+        /*for inline-block adjustment*/
+        font-size: 0;
+        /*z-index: -1;*/
+        /*display: flex; I htink it only work for one line*/
+    }
+
+    div.classy > div.swag{
+        display: inline-block;
+        padding: 0;
+        width: 20vw;
+        height: 25vh;
+        z-index: -1;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.01);
+        transition: all .5s ease-in-out;
+    }
+
+
+
+
+#aboutAuthor{}
+    div.modal {
+        font-size: 1.2em;
+        line-height: 2.5em;
+        display: none;
+        position: fixed;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x : hidden;
+        /*failure case*/
+        background-color: rgba(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+
+        animation-name: fadeIn;
+        animation-duration:0.5s;
+        animation-timing-function: ease-out;
+    }
+
+    div.modal .modal-content {
+        font-size: 0.8em;
+        /*font-family: 'Prompt', cursive;*/
+        position: absolute;         /*If this isn't kept it wont work aaaand I dont know why*/
+        top: 20%;
+        background-color: rgba(0,0,0,0.8);
+        padding: 3px 16px;
+        /*border: 1px solid #ddd;*/
+        color: #ddd;
+        width: 60%;             /*total 80% - 10% width*/
+        left: 20%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+        padding: 5vw;
+    }
+    div.modal a{
+        text-decoration: none;
+        color: #0076d7;
+    }
+
+    div.modal .closeModal {
+        color: red;
+        float: right;
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: -10px;
+    }
+
+    div.modal .closeModal:hover,
+    div.modal .closeModal:focus {
+        color: #0076d7;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    hr.modal{
+        background-color: #336699;
+        height: 1px;
+        border: 0 ;
+    }
+
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {top : 100vh; opacity: 0}
+        to {top : 20vh; opacity: 1}
+    }
+
+    @keyframes slideIn {
+        from {top : 100vh; opacity: 0}
+        to {top : 20vh; opacity: 1}
+    }
+
+    @-webkit-keyframes fadeIn {
+        from {opacity: 0.3}
+        to {opacity: 1}
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0.4}
+        to {opacity: 1}
+    }
+
+
+
+
+#footer{}
+    footer.footer {
+        font-family: 'Exo';
+        padding: 20px;
+        /*try 336699*/
+        color: #000;
+        background-color:#ccc;
+        font-size: 90%;
+        line-height: 1.5em;
+
+    }
+    footer.footer address{
+        font-style: normal;
+        padding: 20px;
+    }
+
+    footer.footer div.footer{
+        margin-left: 30%;
+        margin-right: 30%;
+        height: auto;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    footer.footer div.center{
+        padding: 20px;
+        font-size: 1em;
+        text-align: center;
+    }
+    footer.footer div.center a{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    footer div.idleboy{
+        float: right;
+    }
+
+    details{
+        padding: 20px;
+    }
+
+    div.bottom{
+        display: block;
+        width: 100vw;
+        text-align: center;
+        margin-top: -40px;
+    }
+    div.bottom > a{
+        padding: 0 40px;
+    }
+
+    div.bottom > a > i{
+        font-size: 2em;
+    }
+
+    div.bottom > a:hover{
+        color:#0076d7;
+        cursor: pointer;
+    }
+
+#LoadScreen{}
+    div#load_screen img{
+            height :80px;
+            width: auto;
+    }
+  div#load_screen{
+      /*font-family: 'Love Ya Like A Sister', cursive;*/
+      position: fixed;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      margin: 0;
+      top:0;
+      left:0;
+  }
+
+  div#load_screen > div.loader {
+      color: white;
+      font-size: 120%;
+      letter-spacing: 10px;
+      height: 4vh;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+
+
+#video{}
+    video { 
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background: url('wow.jpg') no-repeat;
+        background-size: cover;
+        transition: 1s opacity;
+        z-index: -1;
+    }
+
+
+
+@media only screen and (max-width: 1100px) {
+   body {
+       font-size : 80%;
+   }
+}
+
+
+@media only screen and (max-width: 1005px) {
+   ul#navbar > li > a {
+       padding : 30px 20px;
+   }
+}
+
+
+@media only screen and (max-width: 900px) {
+   body {
+       font-size : 70%;
+   }
+}
+
+
+@media only screen and (max-width: 850px) {
+   ul#navbar > li.logo > img{
+       display: none;
+   }
+}
+
+
+@media only screen and (max-width: 735px) {
+  ul#navbar > li#company.left{
+       display: none;
+   }
+   ul#navbar > li > a{
+       padding: 25px;
+   }
+   ul#navbar > li.right{
+       ;
+   }
+}
+/*480 is the standard used for screens*/
+
+@media only screen and (max-width: 510px) {
+   ul#navbar > li > a {
+       padding : 20px 10px;
+   }
+   div.burger{
+       top : 80px;
+   }
+}
+
+
+@media only screen and (max-width: 500px) {
+    div.playAnimation {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    div.back3 > div.cards{
+        margin: 40px 0px;
+    }
+    div.burger{
+        top : 40px;
+    }
+    div.burger > div.dash.menu{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+   ul#navbar > li.author.right {
+       display: none;
+   }
+   div.burger{
+       left : 20px;
+   }
+}
+
+
+@media only screen and (max-width: 300px) {
+   ul#navbar{
+       display: none;
+   }
+   div.burger{
+       left : 10px;
+   }
+}
+
+

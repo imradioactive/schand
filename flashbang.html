@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<head>
+<title>schand's portfolio</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Prompt">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="flashbang.css">
+
+ <script>
+window.addEventListener("load",function(){
+
+    var load_screen = document.getElementById("load_screen");
+    document.body.removeChild(load_screen);
+    
+    //self calling
+    (function(){
+        var j = 0;
+        Fader();
+        //would be inefficine to put Fade inside if the function is called multiple number of timees, coz everytime it has the constrct Fader
+        function Fader(){
+            if(j === 5){
+                document.getElementsByClassName("box1")[0].style.opacity = "1";
+
+
+                document.getElementsByClassName("box1")[0].style.top = "40vh";
+                document.getElementsByClassName("playAnimation")[0].style.right = "40px";
+                document.getElementsByClassName("playAnimation")[0].style.opacity = "1";
+                return;
+            }
+            document.getElementsByClassName("dash")[j].style.opacity = "1";
+            document.getElementsByClassName("dash")[j].style.marginTop = "0";
+            j++;
+            setTimeout(function(){Fader();}, 200);
+        }
+    })();
+    swag();
+
+        console.log('yo');
+        var iframe = document.getElementsByClassName('iframe');
+        for (var x = 0; x < iframe.length; x++) {
+            iframe[x].contentWindow.document.body.style = 'zoom:50% !important;';
+        }
+});
+
+function scollIt(id){
+    var elmnt = document.getElementById(id);
+    elmnt.scrollIntoView({block: "start", behavior: "smooth"});
+}
+
+</script>
+
+<body>
+    <ul id="navbar" class="before">
+        <li class="right">Contact</li>
+        <li class="author right" id="authorButton">About</li>
+        <li onclick="scollIt('layouts')" class="right">Layouts</li>
+        <li onclick="scollIt('skills')" class="right">Skills</li>
+        <li class="right">Home</li>
+    </ul>
+
+    <div class="home">
+        <div class ="box1">
+            <center style="font-size:200%;">Hi There!</center>
+            I'm Saichand.<br>I'm an Artist.<br>Go down for more.
+            <center ><i onclick = "scollIt('skills')" title="scroll down" class="fa fa-angle-down" aria-hidden="true"></i></center>
+        </div>
+
+        <div class="playAnimation">
+            <center>Play tiles<br> <i class="fa fa-play-circle" onclick="randomSwag()" aria-hidden="true"></i></center>
+        </div>
+    </div>
+
+
+    <div class="about-me" id="skills">
+        <br>
+        <br>
+        <p style="text-align:center; letter-spacing: 10px;font-size:200%; padding-top: 60px;">ABOUT ME</p>
+        <div class = "box210 midbox">
+            Who am I.
+        </div>
+            <div class = "box211 leftbox ">
+                I'm SaiChand, I am an artist. I like web development. For more about the site click on the ABOUT button on top right
+            </div>
+            <div class = "box212 rightbox ">
+                Stage name, given myself, Radiaoctive.
+            </div>
+
+        <div class = "box220 midbox">
+            How do I like it.
+        </div>
+            <div class = "box221 leftbox ">
+                I like to keep it classy, it looks elegant atleast to me. Click on layouts if you have no idea why you wan
+            </div>
+            <div class = "box222 rightbox">
+                 I spend most of my time learning stuff. Click on contact to get in touch.
+            </div>
+
+        <div class = "box230 midbox">
+            What else do I do.
+            </div>
+            <div class = "box231 leftbox ">
+                I'm not an professinal but i'm good at this. I also photoshop and illustrate.
+            </div>
+            <div class = "box232 rightbox">
+                I dont know what to say. But I want to fill the space.
+            </div>
+    </div>
+
+
+    <div class = "homepage_style" id="templates">
+        <p style="text-align:center; letter-spacing: 10px;font-size:250%; padding-top: 40px; font-weight : 300;">HOMEPAGE STYLES</p>
+        <br>
+        <div class = "home-box">
+            <div class="minimal home">
+                <div style="height: 1px; width: 13px; background-color : white; position: absolute; top :15px; left: 20px;">
+                </div>
+                <div style="height: 1px; width: 13px; background-color : white; position: absolute; top :18px; left: 20px;">
+                </div>
+                <div style="height: 1px; width: 13px; background-color : white; position: absolute; top :21px; left: 20px;">
+                </div>
+                <div style="position: absolute; top :15px; right: 30px; font-size:0.7em;">
+                    LOGO
+                </div>
+                <div style="position: absolute; height : 100%; width: 100%; display:flex; align-items: center; justify-content: center;">
+                    COMPANY
+                </div>
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class = "home-box" id="layouts">
+            <div class="classic home">
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; left: 20px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; left: 60px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; left: 100px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; left: 140px;">
+                </div>
+                <div style="position: absolute; top :15px; right: 20px; font-size:0.7em;">
+                    LOGO
+                </div>
+                <div style="height: 1px;background-color : white; position: absolute; top :40px; width : 100%;">
+                </div>
+
+                <div style="position: absolute; height : 80%; bottom :0; width: 100%; display:flex; align-items: center; justify-content: center;">
+                    image
+                </div>
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "home-box">
+            <div class="centered home">
+                <div style="position: absolute; height : 20%; top :0; width: 100%; display:flex; align-items: center; justify-content: center;">
+                    LOGO
+                </div>
+                <div style="height: 1px; width: 15%; background-color : white; position: absolute; top :60%; left: 8%;">
+                </div>
+                <div style="height: 1px; width: 15%; background-color : white; position: absolute; top :60%; left: 31%;">
+                </div>
+                <div style="height: 1px; width: 15%; background-color : white; position: absolute; top :60%; left: 54%;">
+                </div>
+                <div style="height: 1px; width: 15%; background-color : white; position: absolute; top :60%; left: 77%;">
+                </div>
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class = "home-box">
+            <div class="inline home">
+                <div style="position: absolute; top :15px; left: 20px; font-size:0.7em;">
+                    LOGO
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; right: 20px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; right: 60px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; right: 100px;">
+                </div>
+                <div style="height: 1px; width: 25px; background-color : white; position: absolute; top :20px; right: 140px;">
+                </div>
+
+                <div style="height: 1px;background-color : white; position: absolute; top :40px; width : 100%;">
+                </div>
+                <div style="position: absolute; height : 80%; bottom :0; width: 100%; display:flex; align-items: center; justify-content: center;">
+                    something
+                </div>
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+        </div>
+        <div class = "home-box">
+            <div class="leftbox home">
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class = "home-box">
+            <div class="rightbox home">
+                <div class="openStyle">
+                    <p style="display:inline;">go</p> <i class="fa fa-long-arrow-right" aria-hidden="true" style="position:absolute;right:20px;"></i>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <div class="blog_styles">
+        <p style="letter-spacing: 10px;font-size:250%; padding-top: 60px;">A FEW WORKS</p>
+        <br>
+
+        <iframe class="iframe big" src="https://codepen.io/imradioactive/full/BWBewM/"
+                scrolling="no">
+          <p>Your browser does not support iframes. Open in some browser or device.</p>
+        </iframe>
+        <div class="pins">
+             <iframe class="iframe cards tall" src="https://s.codepen.io/imradioactive/full/BRBRrQ">
+              <p>Your browser does not support iframes. Open in some browser or device.</p>
+            </iframe>
+
+        <iframe class="iframe cards" src="https://s.codepen.io/imradioactive/full/aJoyPd/">
+                  <p>Your browser does not support iframes. Open in some browser or device.</p>
+                </iframe>
+
+        <iframe class="iframe cards" src="https://s.codepen.io/imradioactive/full/LWwBvj/">
+                  <p>Your browser does not support iframes. Open in some browser or device.</p>
+                </iframe>
+             <iframe class="iframe cards" src="https://s.codepen.io/imradioactive/full/NavpWv/">
+              <p>Your browser does not support iframes. Open in some browser or device.</p>
+            </iframe>
+        </div>
+
+           
+
+         <iframe class="iframe big" src="https://s.codepen.io/imradioactive/full/zNyRrg/">
+          <p>Your browser does not support iframes. Open in some browser or device.</p>
+        </iframe>
+
+
+    </div>
+
+
+    <footer class="footer">
+            <address>
+                <div class="footer">
+                    <p class="squared">I'm SaiChand. I'm marvelously jobless, I have to write something about myself in here, but because I couldnt think of anything appropiriate i'm filling it typing shit. 
+                    </p>
+                </div>
+                <div class="center">
+                    <p>contact:</p>
+                    <p><a href="https://gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>itsmesaichand8@gmail.com</p>
+                    <p><span class="glyphicon glyphicon-phone"></span>9091929394</p>
+                    <p><a href="#">address: RoomNo:1001, IIT Hyderabad.</p></a>
+                </div>
+            </address>
+            <div class="idleboy">
+                <p>radioactive
+                     <i class="fa fa-copyright" aria-hidden="true"></i>
+                </p>
+        </div>
+        <details>
+            <summary><h7>AboutWebsite</h7></summary>
+            Developer : SaiChand<br> Date: early 2017 <br>Developement stage : Intermediate
+        </details>
+        <div class="bottom">
+          <a><i class="fa fa-google" aria-hidden="true"></i></a>
+          <a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </div>
+    </footer>
+
+
+
+    <div class="burger" id = "ham" >
+        <div class="dash top"></div>
+        <div class ="dash clock"></div>
+        <div class ="dash antiClock"></div>
+        <div class = "dash bottom"></div>
+        <div class = "dash menu">MENU</div>
+    </div>
+
+   <div class="classy">
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+       <div class="swag"></div>
+
+   </div>
+
+  <ul id="flash">
+      <li><a href="#">home</a></li>
+      <li><a href="#skills">skills</a></li>
+      <li><a href="#layouts">sample layouts</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#" id="authorButton2">about</a></li>
+      <li class="bottom">
+          <a><i class="fa fa-google" aria-hidden="true"></i></a>
+          <a><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          <a><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+          <a><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      </li>
+  </ul>
+
+   <div id="author" class="modal">
+       <!-- Modal content -->
+       <div class="modal-content">
+           <span class="closeModal">&times;</span>
+           <center>
+                <p style="font-size:1.5em; margin:6px;">ABOUT THIS SITE</p>
+                <hr class="modal">
+                <p>Hi, most parts of website were written in the earlier stages of learning.
+                    Built using vanillaJS, CSS3, HTML5.
+                    Apologies for noob code.
+                </p>
+                <p>contact:</p>
+                <p><a href="#">itsmesaichand8@gmail.com</a></p>
+                <p><i class="material-icons modal">phone</i>0000000000</p>
+                <p><a href="#">address: RoomNo:1001, IIT Hyderabad.</p></a>                     <!-- put google maps link-->
+           </center>
+           <hr class="modal">
+           <p style="float:right;">radioactive dude</p>
+         </div>
+   </div>
+
+
+  <div id="load_screen">
+      <div class="loader">
+          <center>
+              Loading...
+              <br>
+              Video in background might take time to load
+              <br>
+          </center>
+      </div>
+  </div>
+
+   <video poster="wow.jpg" id="bgvid" playsinline autoplay muted loop>
+    <source src="fox_video.mp4" type="video/mp4">
+</video>
+
+
+<script src="flashbang.js"></script>
+</body>
