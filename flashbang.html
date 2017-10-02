@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Prompt">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo:300" rel="stylesheet">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="flashbang.css">
@@ -61,10 +61,10 @@ function scollIt(id){
         <li class="author right" id="authorButton">About</li>
         <li onclick="scollIt('layouts')" class="right">Layouts</li>
         <li onclick="scollIt('skills')" class="right">Skills</li>
-        <li class="right">Home</li>
+        <li onclick="scollIt('home')" class="right">Home</li>
     </ul>
 
-    <div class="home">
+    <div class="home" id="home">
         <div class ="box1">
             <center style="font-size:200%;">Hi There!</center>
             I'm Saichand.<br>I'm an Artist.<br>Go down for more.
@@ -231,8 +231,7 @@ function scollIt(id){
         <p style="letter-spacing: 10px;font-size:250%; padding-top: 60px;">A FEW WORKS</p>
         <br>
 
-        <iframe class="iframe big" src="https://codepen.io/imradioactive/full/BWBewM/"
-                scrolling="no">
+        <iframe class="iframe big" src="https://codepen.io/imradioactive/full/BWBewM/">
           <p>Your browser does not support iframes. Open in some browser or device.</p>
         </iframe>
         <div class="pins">
@@ -352,8 +351,10 @@ function scollIt(id){
                 <p style="font-size:1.5em; margin:6px;">ABOUT THIS SITE</p>
                 <hr class="modal">
                 <p>Hi, most parts of website were written in the earlier stages of learning.
-                    Built using vanillaJS, CSS3, HTML5.
+                  <br>
                     Apologies for noob code.
+                    <br>
+                    Built using vanillaJS, CSS3, HTML5.
                 </p>
                 <p>contact:</p>
                 <p><a href="#">itsmesaichand8@gmail.com</a></p>
